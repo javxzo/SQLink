@@ -9,6 +9,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Include CodeMirror CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css"
+    />
+
+    <!-- Include CodeMirror JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/sql/sql.min.js"></script>
   </head>
   <body>
     <header class="header sticky-header">
@@ -18,7 +28,6 @@
         </ul>
         <ul class="right-nav">
           <li><a href="#">Walkthrough</a></li>
-          <!-- <li><a href="#">Pin</a></li> -->
           <li><a href="#" class="button">The Detective</a></li>
         </ul>
       </nav>
@@ -32,7 +41,9 @@
         <div class="section">
           <h2>Investigate.</h2>
           <p>Type your SQL code to Investigate.</p>
-          <textarea class="code-input"></textarea>
+          <div class="code-editor">
+            <textarea class="code-input"></textarea>
+          </div>
           <button class="action-button">Go</button>
         </div>
         <div class="section">
@@ -43,7 +54,9 @@
         <div class="section">
           <h2>Solve.</h2>
           <p>Fill in the code to see if you're right.</p>
-          <textarea class="code-input"></textarea>
+          <div class="code-editor">
+            <textarea class="code-input"></textarea>
+          </div>
           <button class="action-button">Go</button>
         </div>
       </section>
@@ -61,5 +74,34 @@
         </ul>
       </nav>
     </footer>
+
+    <!-- Initialize CodeMirror -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const editorOptions = {
+          lineNumbers: true,
+          mode: "text/x-sql",
+          theme: "default",
+        };
+
+        // Initialize CodeMirror for the first textarea
+        const investigateTextarea = document.querySelector(
+          ".section:nth-of-type(1) .code-input"
+        );
+        const investigateEditor = CodeMirror.fromTextArea(
+          investigateTextarea,
+          editorOptions
+        );
+
+        // Initialize CodeMirror for the third textarea
+        const solveTextarea = document.querySelector(
+          ".section:nth-of-type(3) .code-input"
+        );
+        const solveEditor = CodeMirror.fromTextArea(
+          solveTextarea,
+          editorOptions
+        );
+      });
+    </script>
   </body>
 </html>

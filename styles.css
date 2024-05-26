@@ -215,3 +215,21 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* CodeMirror customization */
+.CodeMirror {
+    font-size: 16px; /* Adjust the font size as needed */
+    text-align: left; /* Ensure the text is left-aligned */
+}
+
+/* Ensure the CodeMirror editor is styled appropriately */
+.CodeMirror {
+    height: auto; /* Allows the editor to expand as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #9495B3;
+}
+
+/* Optional: Specific height if you want to control the editor's initial height */
+.code-input {
+    height: 150px; /* Adjust as needed */
+}
