@@ -41,7 +41,7 @@ body {
 
 .header nav ul.left-nav {
     margin-left: 20px;
-    font-family: 'Marola', serif; /* Apply the custom font */
+    font-family: 'Marola', serif; 
 }
 
 .header nav ul.right-nav {
@@ -81,9 +81,9 @@ body {
 .hero .title {
     margin: 0;
     font-size: 60px;
-    font-family: 'Marola', serif; /* Apply the custom font */
+    font-family: 'Marola', serif; 
     color: #d1d1d1;
-    transition: transform 0.3s ease, color 0.3s ease; /* Added transition for smooth effect */
+    transition: transform 0.3s ease, color 0.3s ease; 
 }
 
 .hero .subtitle {
@@ -111,15 +111,14 @@ body {
     
 }
 
-/* Adjust spacing between titles and subtitles */
 .section h2 {
     margin-top: 0;
-    margin-bottom: 5px; /* Adjust this value to reduce space */
+    margin-bottom: 5px; 
     font-family: 'Courier New', Courier, monospace;
 }
 
 .section p {
-    margin-top: 5px; /* Adjust this value to reduce space */
+    margin-top: 5px; 
     margin-bottom: 10px;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -164,7 +163,7 @@ body {
     border-top: 1px solid #ccc;
     display: flex;
     
-    justify-content: space-between; /* Keeps left and right sections spaced apart */
+    justify-content: space-between;
 }
 
 .footer nav ul {
@@ -207,11 +206,11 @@ body {
 }
 
 .title:hover {
-    color: #000f08; /* Change to whatever color you prefer */
+    color: #000f08; 
     transition: color 0.3s ease;
 }
 .title:hover {
-    transform: scale(1.1); /* Adjust scale value to control the amount of warp */
+    transform: scale(1.1); 
     transition: transform 0.3s ease;
 }
 
