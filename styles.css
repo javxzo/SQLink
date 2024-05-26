@@ -41,7 +41,7 @@ body {
 
 .header nav ul.left-nav {
     margin-left: 20px;
-    font-family: 'Marola', serif; 
+    font-family: 'Marola', serif; /* Apply the custom font */
 }
 
 .header nav ul.right-nav {
@@ -81,9 +81,9 @@ body {
 .hero .title {
     margin: 0;
     font-size: 60px;
-    font-family: 'Marola', serif; 
+    font-family: 'Marola', serif; /* Apply the custom font */
     color: #d1d1d1;
-    transition: transform 0.3s ease, color 0.3s ease; 
+    transition: transform 0.3s ease, color 0.3s ease; /* Added transition for smooth effect */
 }
 
 .hero .subtitle {
@@ -92,9 +92,9 @@ body {
     color: #9495B3;
 }
 
-.hero .title:hover{
+.hero .title:hover {
     transform: scale(1.05);
-    color:#000f08;
+    color: #000f08;
 }
 
 .content {
@@ -108,24 +108,28 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     text-align: center;
-    
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* Adjust spacing between titles and subtitles */
 .section h2 {
     margin-top: 0;
-    margin-bottom: 5px; 
+    margin-bottom: 5px; /* Adjust this value to reduce space */
     font-family: 'Courier New', Courier, monospace;
 }
 
 .section p {
-    margin-top: 5px; 
+    margin-top: 5px; /* Adjust this value to reduce space */
     margin-bottom: 10px;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .section .code-input {
     width: calc(100% - 20px);
-    height: 150px;
+    height: 70px; /* Adjust to fit within section height */
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
@@ -137,7 +141,7 @@ body {
 
 .section .output-box {
     width: calc(100% - 20px);
-    height: 150px;
+    height: 120px; /* Adjust to fit within section height */
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
@@ -162,8 +166,7 @@ body {
     background-color: #d3d4d9;
     border-top: 1px solid #ccc;
     display: flex;
-    
-    justify-content: space-between;
+    justify-content: space-between; /* Keeps left and right sections spaced apart */
 }
 
 .footer nav ul {
@@ -206,29 +209,24 @@ body {
 }
 
 .title:hover {
-    color: #000f08; 
+    color: #000f08; /* Change to whatever color you prefer */
     transition: color 0.3s ease;
 }
+
 .title:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1); /* Adjust scale value to control the amount of warp */
     transition: transform 0.3s ease;
 }
 
-/* CodeMirror customization */
 .CodeMirror {
-    font-size: 16px; /* Adjust the font size as needed */
-    text-align: left; /* Ensure the text is left-aligned */
+    font-size: 16px;
+    text-align: left;
+    height: 70px; /* Adjust to fit within section height */
 }
 
-/* Ensure the CodeMirror editor is styled appropriately */
 .CodeMirror {
-    height: auto; /* Allows the editor to expand as needed */
+    height: auto;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #9495B3;
-}
-
-/* Optional: Specific height if you want to control the editor's initial height */
-.code-input {
-    height: 150px; /* Adjust as needed */
 }

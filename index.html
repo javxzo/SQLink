@@ -41,9 +41,7 @@
         <div class="section">
           <h2>Investigate.</h2>
           <p>Type your SQL code to Investigate.</p>
-          <div class="code-editor">
-            <textarea class="code-input"></textarea>
-          </div>
+          <textarea class="code-input"></textarea>
           <button class="action-button">Go</button>
         </div>
         <div class="section">
@@ -51,14 +49,12 @@
           <p>Analyze the results.</p>
           <div class="output-box"></div>
         </div>
-        <div class="section">
+        <!-- <div class="section">
           <h2>Solve.</h2>
           <p>Fill in the code to see if you're right.</p>
-          <div class="code-editor">
-            <textarea class="code-input"></textarea>
-          </div>
+          <textarea class="code-input"></textarea>
           <button class="action-button">Go</button>
-        </div>
+        </div> -->
       </section>
     </main>
     <footer class="footer">
@@ -84,7 +80,7 @@
           theme: "default",
         };
 
-        // Initialize CodeMirror for the first textarea
+        // CodeMirror for the first text area
         const investigateTextarea = document.querySelector(
           ".section:nth-of-type(1) .code-input"
         );
@@ -93,7 +89,7 @@
           editorOptions
         );
 
-        // Initialize CodeMirror for the third textarea
+        //remove later - if solve not added back
         const solveTextarea = document.querySelector(
           ".section:nth-of-type(3) .code-input"
         );
