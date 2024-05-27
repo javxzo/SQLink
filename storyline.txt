@@ -1,0 +1,95 @@
+PHONE RECORDS
+INSERT INTO PhoneRecords (record_id, person_id, timestamp, phone_number, call_duration, call_type) VALUES
+(1, 6, '2023-05-01 19:50:00', 'Unknown', '300', 'incoming'),
+(2, 4, '2023-05-01 20:10:00', '123-456-7890', '120', 'outgoing'),
+(3, 3, '2023-05-01 20:25:00', '234-567-8901', '60', 'incoming'),
+(4, 2, '2023-05-01 20:15:00', '345-678-9012', '180', 'incoming'),
+(5, 5, '2023-05-01 19:45:00', '456-789-0123', '240', 'outgoing'),
+(6, 6, '2023-05-01 20:30:00', 'Unknown', '180', 'incoming'),
+(7, 4, '2023-05-01 20:40:00', '567-890-1234', '90', 'incoming'),
+(8, 3, '2023-05-01 21:00:00', '678-901-2345', '150', 'outgoing'),
+(9, 6, '2023-05-01 21:10:00', 'Unknown', '120', 'outgoing'),
+(10, 2, '2023-05-01 19:55:00', '789-012-3456', '210', 'outgoing'),
+(11, 5, '2023-05-01 20:05:00', '890-123-4567', '180', 'incoming'),
+(12, 3, '2023-05-01 20:45:00', '901-234-5678', '90', 'outgoing'),
+(13, 6, '2023-05-01 20:50:00', 'Unknown', '200', 'incoming'),
+(14, 4, '2023-05-01 20:20:00', '012-345-6789', '150', 'outgoing'),
+(15, 2, '2023-05-01 21:15:00', 'Unknown', '180', 'incoming');
+
+CLUES
+INSERT INTO Clues (clue_id, description, is_discovered) VALUES
+(1, 'Gloves found in David Finch’s locker', 0),
+(2, 'Unscheduled access to the museum security system', 0),
+(3, 'Text messages between David Finch and an unknown number', 0),
+(4, 'A mysterious phone call to David Finch shortly before the murder', 0),
+(5, 'Damaged ancient vase found near the crime scene', 0),
+(6, 'A partial fingerprint on the ceremonial dagger', 0), -- Red herring
+(7, 'A suspicious note in Sarah Reynolds\' desk', 0), -- Red herring
+(8, 'Professor Mallory seen arguing with Dr. Blackwood earlier in the day', 0); -- Red herring
+
+RELATIONSHIPS
+INSERT INTO Relationships (relationship_id, person1_id, person2_id, description) VALUES
+(13, 6, 4, 'Marcus Hughes has been seen talking privately with David Finch'),
+(14, 6, 3, 'Lily Andrews and David Finch were seen having a heated discussion last week'),
+(15, 5, 3, 'Sarah Reynolds is known to have a friendly relationship with Lily Andrews');
+
+PERSONS
+INSERT INTO Persons (person_id, name, role, profile) VALUES
+(1, 'Dr. Helena Blackwood', 'Victim', 'Highly respected curator with a reputation for being meticulous and demanding.'),
+(2, 'Professor Vincent Mallory', 'Suspect', 'Brilliant scholar with a long-standing rivalry with Dr. Blackwood. Ambitious and willing to do whatever it takes to advance his career.'),
+(3, 'Lily Andrews', 'Suspect', 'Talented artist with a troubled past involving addiction and personal struggles. Known for her intense personality and emotional volatility.'),
+(4, 'Marcus Hughes', 'Suspect', 'Wealthy art collector with a penchant for controversy. Rumored to have shady connections and a history of manipulating the art market.'),
+(5, 'Sarah Reynolds', 'Suspect', 'Dedicated assistant to Dr. Blackwood, known for her efficiency and loyalty. She harbors resentment towards certain colleagues for not appreciating her hard work.'),
+(6, 'David Finch', 'Suspect', 'Quiet and unassuming security guard with a keen eye for detail. He takes his job seriously but often feels overlooked and underappreciated. Recently seen acting strangely and receiving mysterious phone calls.');
+
+CASE DETAILS
+INSERT INTO CaseDetails (case_id, description, murder_weapon, crime_scene_description, forensic_evidence) VALUES
+(1, 'Dr. Helena Blackwood found murdered in her office.', 'Rare ceremonial dagger', 'Office shows signs of a struggle with overturned furniture and broken artifacts.', 'No fingerprints found, indicating the killer wore gloves.');
+
+ALIBIS
+INSERT INTO Alibis (alibi_id, person_id, alibi, is_verified) VALUES
+(1, 2, 'Attending a lecture', 0),
+(2, 3, 'In her studio', 0),
+(3, 4, 'Mingling with guests at the exhibition', 0),
+(4, 5, 'Assisting Dr. Blackwood until shortly before the murder', 1),
+(5, 6, 'Patrolling the museum grounds', 0); -- David's alibi is initially solid, but evidence will disprove it.
+
+INTERVIEWS
+INSERT INTO Interviews (interview_id, person_id, transcript) VALUES
+(1, 2, 'I was at a lecture, but I did see David Finch acting strange earlier.'),
+(2, 3, 'I was in my studio all night working on new pieces.'),
+(3, 4, 'I was talking to many guests; you can ask around.'),
+(4, 5, 'I was with Dr. Blackwood until just before the murder. I didn’t see anything suspicious.'),
+(5, 6, 'I was patrolling the grounds. It was a quiet night.'); -- David is lying about his movements.
+
+CAMERA FOOTAGE
+INSERT INTO CameraFootage (footage_id, timestamp, location, person_id, description) VALUES
+(1, '2023-05-01 20:15:00', 'Main Hall', 6, 'David Finch seen near the entrance to Dr. Blackwood’s office.'),
+(2, '2023-05-01 20:45:00', 'Security Room', 6, 'David Finch seen in the security room.'),
+(3, '2023-05-01 20:30:00', 'East Wing', 4, 'Marcus Hughes seen talking to a group of guests.'),
+(4, '2023-05-01 20:20:00', 'Studio', 3, 'No footage available for Lily Andrews.'),
+(5, '2023-05-01 20:50:00', 'Lecture Hall', 2, 'Professor Vincent Mallory seen leaving the lecture hall.');
+
+SECURITY LOG
+INSERT INTO SecurityLog (log_id, timestamp, person_id, action, description) VALUES
+(1, '2023-05-01 20:00:00', 6, 'Entered', 'David Finch entered the security room.'),
+(2, '2023-05-01 20:15:00', 6, 'Exited', 'David Finch exited the security room.'),
+(3, '2023-05-01 20:10:00', 2, 'Entered', 'Professor Vincent Mallory entered the lecture hall.'),
+(4, '2023-05-01 20:50:00', 2, 'Exited', 'Professor Vincent Mallory exited the lecture hall.'),
+(5, '2023-05-01 20:05:00', 5, 'Entered', 'Sarah Reynolds entered the curator\'s office.'),
+(6, '2023-05-01 20:25:00', 5, 'Exited', 'Sarah Reynolds exited the curator\'s office.'),
+(7, '2023-05-01 20:35:00', 6, 'Entered', 'David Finch entered the curator\'s office.'),
+(8, '2023-05-01 20:55:00', 6, 'Exited', 'David Finch exited the curator\'s office.'),
+(9, '2023-05-01 20:20:00', 3, 'Entered', 'Lily Andrews entered the studio.'),
+(10, '2023-05-01 21:00:00', 3, 'Exited', 'Lily Andrews exited the studio.'),
+(11, '2023-05-01 20:30:00', 4, 'Entered', 'Marcus Hughes entered the exhibition hall.'),
+(12, '2023-05-01 20:45:00', 4, 'Exited', 'Marcus Hughes exited the exhibition hall.'),
+(13, '2023-05-01 20:40:00', 6, 'Entered', 'David Finch entered the security room again.'),
+(14, '2023-05-01 21:10:00', 6, 'Exited', 'David Finch exited the security room again.');
+
+ARTIFACTS
+INSERT INTO Artifacts (artifact_id, name, description, location, is_damaged) VALUES
+(1, 'Ancient Vase', 'A priceless ancient vase from the Ming dynasty.', 'Exhibit Hall', 1),
+(2, 'Ceremonial Dagger', 'A rare ceremonial dagger from the museum\'s collection.', 'Curator\'s Office', 1),
+(3, 'Oil Painting', 'An exquisite oil painting by a renowned artist.', 'Main Gallery', 0),
+(4, 'Sculpture', 'A marble sculpture from the Renaissance period.', 'Main Hall', 0);
