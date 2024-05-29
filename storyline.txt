@@ -1,4 +1,3 @@
-PHONE RECORDS
 INSERT INTO PhoneRecords (record_id, person_id, timestamp, phone_number, call_duration, call_type) VALUES
 (1, 6, '2023-05-01 19:50:00', 'Unknown', '300', 'incoming'),
 (2, 4, '2023-05-01 20:10:00', '123-456-7890', '120', 'outgoing'),
@@ -16,7 +15,6 @@ INSERT INTO PhoneRecords (record_id, person_id, timestamp, phone_number, call_du
 (14, 4, '2023-05-01 20:20:00', '012-345-6789', '150', 'outgoing'),
 (15, 2, '2023-05-01 21:15:00', 'Unknown', '180', 'incoming');
 
-CLUES
 INSERT INTO Clues (clue_id, description, is_discovered) VALUES
 (1, 'Gloves found in David Finch’s locker', 0),
 (2, 'Unscheduled access to the museum security system', 0),
@@ -27,13 +25,11 @@ INSERT INTO Clues (clue_id, description, is_discovered) VALUES
 (7, 'A suspicious note in Sarah Reynolds\' desk', 0), -- Red herring
 (8, 'Professor Mallory seen arguing with Dr. Blackwood earlier in the day', 0); -- Red herring
 
-RELATIONSHIPS
 INSERT INTO Relationships (relationship_id, person1_id, person2_id, description) VALUES
 (13, 6, 4, 'Marcus Hughes has been seen talking privately with David Finch'),
 (14, 6, 3, 'Lily Andrews and David Finch were seen having a heated discussion last week'),
 (15, 5, 3, 'Sarah Reynolds is known to have a friendly relationship with Lily Andrews');
 
-PERSONS
 INSERT INTO Persons (person_id, name, role, profile) VALUES
 (1, 'Dr. Helena Blackwood', 'Victim', 'Highly respected curator with a reputation for being meticulous and demanding.'),
 (2, 'Professor Vincent Mallory', 'Suspect', 'Brilliant scholar with a long-standing rivalry with Dr. Blackwood. Ambitious and willing to do whatever it takes to advance his career.'),
@@ -42,11 +38,9 @@ INSERT INTO Persons (person_id, name, role, profile) VALUES
 (5, 'Sarah Reynolds', 'Suspect', 'Dedicated assistant to Dr. Blackwood, known for her efficiency and loyalty. She harbors resentment towards certain colleagues for not appreciating her hard work.'),
 (6, 'David Finch', 'Suspect', 'Quiet and unassuming security guard with a keen eye for detail. He takes his job seriously but often feels overlooked and underappreciated. Recently seen acting strangely and receiving mysterious phone calls.');
 
-CASE DETAILS
 INSERT INTO CaseDetails (case_id, description, murder_weapon, crime_scene_description, forensic_evidence) VALUES
 (1, 'Dr. Helena Blackwood found murdered in her office.', 'Rare ceremonial dagger', 'Office shows signs of a struggle with overturned furniture and broken artifacts.', 'No fingerprints found, indicating the killer wore gloves.');
 
-ALIBIS
 INSERT INTO Alibis (alibi_id, person_id, alibi, is_verified) VALUES
 (1, 2, 'Attending a lecture', 0),
 (2, 3, 'In her studio', 0),
@@ -54,7 +48,6 @@ INSERT INTO Alibis (alibi_id, person_id, alibi, is_verified) VALUES
 (4, 5, 'Assisting Dr. Blackwood until shortly before the murder', 1),
 (5, 6, 'Patrolling the museum grounds', 0); -- David's alibi is initially solid, but evidence will disprove it.
 
-INTERVIEWS
 INSERT INTO Interviews (interview_id, person_id, transcript) VALUES
 (1, 2, 'I was at a lecture, but I did see David Finch acting strange earlier.'),
 (2, 3, 'I was in my studio all night working on new pieces.'),
@@ -62,7 +55,6 @@ INSERT INTO Interviews (interview_id, person_id, transcript) VALUES
 (4, 5, 'I was with Dr. Blackwood until just before the murder. I didn’t see anything suspicious.'),
 (5, 6, 'I was patrolling the grounds. It was a quiet night.'); -- David is lying about his movements.
 
-CAMERA FOOTAGE
 INSERT INTO CameraFootage (footage_id, timestamp, location, person_id, description) VALUES
 (1, '2023-05-01 20:15:00', 'Main Hall', 6, 'David Finch seen near the entrance to Dr. Blackwood’s office.'),
 (2, '2023-05-01 20:45:00', 'Security Room', 6, 'David Finch seen in the security room.'),
@@ -70,7 +62,6 @@ INSERT INTO CameraFootage (footage_id, timestamp, location, person_id, descripti
 (4, '2023-05-01 20:20:00', 'Studio', 3, 'No footage available for Lily Andrews.'),
 (5, '2023-05-01 20:50:00', 'Lecture Hall', 2, 'Professor Vincent Mallory seen leaving the lecture hall.');
 
-SECURITY LOG
 INSERT INTO SecurityLog (log_id, timestamp, person_id, action, description) VALUES
 (1, '2023-05-01 20:00:00', 6, 'Entered', 'David Finch entered the security room.'),
 (2, '2023-05-01 20:15:00', 6, 'Exited', 'David Finch exited the security room.'),
@@ -87,7 +78,6 @@ INSERT INTO SecurityLog (log_id, timestamp, person_id, action, description) VALU
 (13, '2023-05-01 20:40:00', 6, 'Entered', 'David Finch entered the security room again.'),
 (14, '2023-05-01 21:10:00', 6, 'Exited', 'David Finch exited the security room again.');
 
-ARTIFACTS
 INSERT INTO Artifacts (artifact_id, name, description, location, is_damaged) VALUES
 (1, 'Ancient Vase', 'A priceless ancient vase from the Ming dynasty.', 'Exhibit Hall', 1),
 (2, 'Ceremonial Dagger', 'A rare ceremonial dagger from the museum\'s collection.', 'Curator\'s Office', 1),
