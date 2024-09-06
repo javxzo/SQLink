@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Marola';
+    src: url('MAROLA__.TTF') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #545677;
+    cursor: url('magnifying-glass.png'), auto;
+}
+
+.sticky-header {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header {
+    background-color: #d3d4d9;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header nav ul.left-nav {
+    margin-left: 20px;
+    font-family: 'Marola', serif; /* Apply the custom font */
+}
+
+.header nav ul.right-nav {
+    margin-right: 20px;
+    margin-left: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header nav ul li {
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: #000f08;
+    font-weight: bold;
+}
+
+.header nav ul.right-nav li a:hover {
+    text-decoration: underline;
+}
+
+.header .button {
+    background-color: #545677;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #d1d1d1;
+}
+
+.hero {
+    padding: 50px 0;
+    background-color: #545677;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.hero .title {
+    margin: 0;
+    font-size: 60px;
+    font-family: 'Marola', serif; /* Apply the custom font */
+    color: #d1d1d1;
+    transition: transform 0.3s ease, color 0.3s ease; /* Added transition for smooth effect */
+}
+
+.hero .subtitle {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: #9495B3;
+}
+
+.hero .title:hover {
+    transform: scale(1.05);
+    color: #000f08;
+}
+
+.content {
+    padding: 20px;
+}
+
+.section {
+    margin: 20px auto; /* Center the sections */
+    background-color: #d3d4d9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1200px; /* Set the maximum width of each section */
+}
+
+/* Adjust spacing between titles and subtitles */
+.section h2 {
+    margin-top: 0;
+    margin-bottom: 5px; /* Adjust this value to reduce space */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.section p {
+    margin-top: 5px; /* Adjust this value to reduce space */
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.section .code-input {
+    width: calc(100% - 20px);
+    height: 200px; /* Adjust to fit within section height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    resize: none;
+    background-color: #9495B3;
+}
+
+.section .output-box {
+    width: calc(100% - 20px);
+    height: 100px; /* Adjust to fit within section height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    background-color: #fff;
+}
+
+.output-box {
+    width: calc(100% - 20px);
+    max-height: 300px; /* Set maximum height */
+    overflow: auto; /* Make it scrollable if content exceeds max-height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fff;
+    white-space: pre-wrap; /* Preserve white space and wrap content */
+  }
+
+.action-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000f08;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer {
+    padding: 20px;
+    background-color: #d3d4d9;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between; /* Keeps left and right sections spaced apart */
+}
+
+.footer nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer nav ul.left-footer-nav {
+    margin-left: auto;
+    font-family: 'Marola';
+}
+
+.footer nav ul.right-footer-nav {
+    margin-left: auto; /* Moves the right-footer-nav to the right */
+    margin-right: 20px; /* Keeps a right margin */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.footer nav ul li {
+    margin: 0 15px;
+}
+
+.footer nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Specific styles for Investigate section */
+.section:nth-of-type(1) h2,
+.section:nth-of-type(1) p {
+    text-align: right;
+}
+
+/* Specific styles for Solve section */
+.section:nth-of-type(3) h2,
+.section:nth-of-type(3) p {
+    text-align: left;
+}
+
+.title:hover {
+    color: #000f08; /* Change to whatever color you prefer */
+    transition: color 0.3s ease;
+}
+
+.title:hover {
+    transform: scale(1.1); /* Adjust scale value to control the amount of warp */
+    transition: transform 0.3s ease;
+}
+
+.CodeMirror {
+    font-size: 16px;
+    text-align: left;
+    height: 150px; /* Adjust to fit within section height */
+}
+
+.CodeMirror {
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #9495B3;
+}

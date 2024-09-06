@@ -16,13 +16,13 @@ INSERT INTO PhoneRecords (record_id, person_id, timestamp, phone_number, call_du
 (15, 2, '2023-05-01 21:15:00', 'Unknown', '180', 'incoming');
 
 INSERT INTO Clues (clue_id, description, is_discovered) VALUES
-(1, 'Gloves found in David Finch’s locker', 0),
+(1, 'Gloves found in David Finch locker', 0),
 (2, 'Unscheduled access to the museum security system', 0),
 (3, 'Text messages between David Finch and an unknown number', 0),
 (4, 'A mysterious phone call to David Finch shortly before the murder', 0),
 (5, 'Damaged ancient vase found near the crime scene', 0),
 (6, 'A partial fingerprint on the ceremonial dagger', 0), -- Red herring
-(7, 'A suspicious note in Sarah Reynolds\' desk', 0), -- Red herring
+(7, 'A suspicious note in Sarah Reynolds desk', 0), -- Red herring
 (8, 'Professor Mallory seen arguing with Dr. Blackwood earlier in the day', 0); -- Red herring
 
 INSERT INTO Relationships (relationship_id, person1_id, person2_id, description) VALUES
@@ -67,10 +67,10 @@ INSERT INTO SecurityLog (log_id, timestamp, person_id, action, description) VALU
 (2, '2023-05-01 20:15:00', 6, 'Exited', 'David Finch exited the security room.'),
 (3, '2023-05-01 20:10:00', 2, 'Entered', 'Professor Vincent Mallory entered the lecture hall.'),
 (4, '2023-05-01 20:50:00', 2, 'Exited', 'Professor Vincent Mallory exited the lecture hall.'),
-(5, '2023-05-01 20:05:00', 5, 'Entered', 'Sarah Reynolds entered the curator\'s office.'),
-(6, '2023-05-01 20:25:00', 5, 'Exited', 'Sarah Reynolds exited the curator\'s office.'),
-(7, '2023-05-01 20:35:00', 6, 'Entered', 'David Finch entered the curator\'s office.'),
-(8, '2023-05-01 20:55:00', 6, 'Exited', 'David Finch exited the curator\'s office.'),
+(5, '2023-05-01 20:05:00', 5, 'Entered', 'Sarah Reynolds entered the curators office.'),
+(6, '2023-05-01 20:25:00', 5, 'Exited', 'Sarah Reynolds exited the curators office.'),
+(7, '2023-05-01 20:35:00', 6, 'Entered', 'David Finch entered the curators office.'),
+(8, '2023-05-01 20:55:00', 6, 'Exited', 'David Finch exited the curators office.'),
 (9, '2023-05-01 20:20:00', 3, 'Entered', 'Lily Andrews entered the studio.'),
 (10, '2023-05-01 21:00:00', 3, 'Exited', 'Lily Andrews exited the studio.'),
 (11, '2023-05-01 20:30:00', 4, 'Entered', 'Marcus Hughes entered the exhibition hall.'),
@@ -80,6 +80,6 @@ INSERT INTO SecurityLog (log_id, timestamp, person_id, action, description) VALU
 
 INSERT INTO Artifacts (artifact_id, name, description, location, is_damaged) VALUES
 (1, 'Ancient Vase', 'A priceless ancient vase from the Ming dynasty.', 'Exhibit Hall', 1),
-(2, 'Ceremonial Dagger', 'A rare ceremonial dagger from the museum\'s collection.', 'Curator\'s Office', 1),
+(2, 'Ceremonial Dagger', 'A rare ceremonial dagger from the museums collection.', 'Curators Office', 1),
 (3, 'Oil Painting', 'An exquisite oil painting by a renowned artist.', 'Main Gallery', 0),
 (4, 'Sculpture', 'A marble sculpture from the Renaissance period.', 'Main Hall', 0);
